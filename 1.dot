@@ -1,0 +1,20 @@
+
+
+digraph
+{
+    rankdir = LR;
+
+    node[color = "red", fontsize = 14];
+    edge[color = "black", fontcolor = "blue", fontsize = 12];
+
+    1[shape = "rectangle", style = "filled", fillcolor = "lightgray"];
+    ClOSED[shape = "rectangle", style = "rounded"];
+    VERIFIDE[chpe = "rctanglre", style = "rounded"];
+
+    OPEN -> RESOLVED -> "VERIFIED" -> CLOSED;
+    OPEN -> CLOSED[style = "bold"];
+    VERIFIED -> OPEN[label = "ERRORS", style = "dashed", arrowed = "dot"];
+    {rank = same; OPEN; RESOLVED; "VERIFIED"; CLOSED}
+    {rank = same; OPEN; CLOSED[style = "bold"]}
+    {rank = same; VERIFIED; OPEN[label = "ERRORS", style = "dashed", arrowed = "dot"];}
+}

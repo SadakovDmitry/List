@@ -1,0 +1,49 @@
+digraph G
+{
+	rankdir = "LR";
+
+	node[color = "red", fontsize = 14];
+	edge[color = "black", fontcolor = "blue", fontsize = 12, weight = 0];
+
+	List [shape = record, style = "rounded", label = "capacity: 16 | head: 4 | tail: 11 | n_elem: 12 | free: 13"];
+	0 [shape = record, style = "rounded", label = "ind: 0 | val: -1111 | nxt: 4 | prv: 11 "];
+	1 [shape = record, style = "rounded", label = "ind: 1 | val: 1 | nxt: 2 | prv: 4 "];
+	2 [shape = record, style = "rounded", label = "ind: 2 | val: 2 | nxt: 3 | prv: 1 "];
+	3 [shape = record, style = "rounded", label = "ind: 3 | val: 3 | nxt: 5 | prv: 2 "];
+	4 [shape = record, style = "rounded", label = "ind: 4 | val: 200 | nxt: 1 | prv: 0 "];
+	5 [shape = record, style = "rounded", label = "ind: 5 | val: 5 | nxt: 12 | prv: 3 "];
+	6 [shape = record, style = "rounded", label = "ind: 6 | val: 6 | nxt: 7 | prv: 12 "];
+	7 [shape = record, style = "rounded", label = "ind: 7 | val: 7 | nxt: 8 | prv: 6 "];
+	8 [shape = record, style = "rounded", label = "ind: 8 | val: 8 | nxt: 9 | prv: 7 "];
+	9 [shape = record, style = "rounded", label = "ind: 9 | val: 9 | nxt: 10 | prv: 8 "];
+	10 [shape = record, style = "rounded", label = "ind: 10 | val: 10 | nxt: 11 | prv: 9 "];
+	11 [shape = record, style = "rounded", label = "ind: 11 | val: 11 | nxt: 0 | prv: 10 "];
+	12 [shape = record, style = "rounded", label = "ind: 12 | val: 100 | nxt: 6 | prv: 5 "];
+	13 [shape = record, style = "rounded", label = "ind: 13 | val: 0 | nxt: 14 | prv: -1 "];
+	14 [shape = record, style = "rounded", label = "ind: 14 | val: 0 | nxt: 15 | prv: -1 "];
+	15 [shape = record, style = "rounded", label = "ind: 15 | val: 0 | nxt: 16 | prv: -1 "];
+	
+
+	List -> 0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 13 -> 14 -> 15 [weight = 1000, color = "#FFFFFF"];
+	14 -> 15;
+	13 -> 14;
+	12 -> 6;
+	11 -> 0;
+	10 -> 11;
+	9 -> 10;
+	8 -> 9;
+	7 -> 8;
+	6 -> 7;
+	5 -> 12;
+	4 -> 1;
+	3 -> 5;
+	2 -> 3;
+	1 -> 2;
+	0 -> 4;
+	node[color = "green", fontsize = 14];
+	"POIZON\nELEM" -> 0[color = "green"]
+	"HEAD" -> 4[color = "green"]
+	"TAIL" -> 11[color = "green"]
+	"FREE" -> 13[color = "green"]
+
+}
