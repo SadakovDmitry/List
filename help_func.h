@@ -1,0 +1,11 @@
+void Resize_List(struct List* list, int position);
+ int Get_Next(struct List* list, int pos);
+ int Get_Prev(struct List* list, int pos);
+ int Get_Head(struct List* list);
+ int Get_Tail(struct List* list);
+ int Check_List(struct List* list);
+void Put_Elem_to_position(struct List* list, int position);
+void Put_Elem_to_end(struct List* list, int position);
+ int Find_Reall_Id(struct List* list, int pos);
+void Do_Graph(struct List* list);
+void Beautiful_Dump();
