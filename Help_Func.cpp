@@ -159,3 +159,28 @@ void Beautiful_Dump()
             "  | (￣ヽ__ヽ_)_)\n"
             "  ＼二つ    \033[31mDUMP\033[0m ");
 }
+
+void Make_Program(struct List* list)
+{
+    List_Ctor(list);
+
+    for(int i = 1; i < 12; i++)
+    {
+        List_Insert_Before(list, i, i);
+    }
+
+    //for(int i = 1; i < 12; i++)
+    //{
+        //Delete(&list, i);
+    //}
+
+    Delete(list, 4);
+
+    List_Insert_Before(list, 200, 1);
+    List_Insert_Before(list, 100, 6);
+
+    Find_Reall_Id(list, 1);
+
+    Do_Graph(list);
+    List_Dtor(list);
+}

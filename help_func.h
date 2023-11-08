@@ -9,3 +9,4 @@ void Put_Elem_to_end(struct List* list, int position);
  int Find_Reall_Id(struct List* list, int pos);
 void Do_Graph(struct List* list);
 void Beautiful_Dump();
+void Make_Program(struct List* list);

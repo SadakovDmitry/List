@@ -9,10 +9,19 @@ void List_Dump(struct List* list);
 void List_Verify(struct List* list);
 
 
+struct List_on_Pointers* List_on_Pointers_Ctor(struct Elem_list* elem_list);
+void List_on_Pointers_Dtor(struct List_on_Pointers* list);
+struct Elem_list* List_on_Pointers_Insert_Before(struct List_on_Pointers* list_on_pointers, int value, struct Elem_list* next_elem);
+struct Elem_list* List_on_Pointers_Insert_After(struct List_on_Pointers* list_on_pointers, int val, struct Elem_list* next_elem);
+struct Elem_list* Delete_in_List_on_Pointers(struct List_on_Pointers* list_on_pointers, struct Elem_list* del_elem);
+void List_on_Pointers_Dump(struct List_on_Pointers* list_on_pointers);
+
+
 #define GET_PREV(pos) Get_Prev(list, pos)
 #define GET_NEXT(pos) Get_Next(list, pos)
 #define GET_HEAD      Get_Head(list)
 #define GET_TAIL      Get_Tail(list)
+//#define DUMP_ON 1
 
 
 const int poizon = -1111;
@@ -29,6 +38,21 @@ struct List
     int  n_elem;
     int  capacity;
     int  errors;
+};
+
+
+struct Elem_list
+{
+    struct Elem_list* next;
+    struct Elem_list* prev;
+    int val;
+};
+
+struct List_on_Pointers
+{
+    struct Elem_list* head;
+    struct Elem_list* tail;
+    int size;
 };
 
 
